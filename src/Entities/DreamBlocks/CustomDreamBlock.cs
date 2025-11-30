@@ -634,7 +634,7 @@ public abstract class CustomDreamBlock : DreamBlock
             }
 
             // Ensures the player always properly enters a dream block even when it's moving fast
-            if (customDreamBlock is DreamZipMover or DreamSwapBlock)
+            if (customDreamBlock is DreamZipMover or DreamSwapBlock or DreamMoveBlock)
             {
                 player.Position.X += Math.Sign(player.DashDir.X);
                 player.Position.Y += Math.Sign(player.DashDir.Y);
